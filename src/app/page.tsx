@@ -12,10 +12,8 @@ import {
   MastodonIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoAWS from '@/images/logos/aws.svg'
+import logoDeloitte from '@/images/logos/deloitte.svg'
 import image1 from '@/images/photos/image-11.jpg'
 import image2 from '@/images/photos/image-4.jpg'
 import image3 from '@/images/photos/image-12.jpg'
@@ -111,6 +109,7 @@ function SocialLink({
   )
 }
 
+// TODO: make this functional
 function Newsletter() {
   return (
     <form
@@ -190,35 +189,29 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Money Forward, Inc',
+      title: 'Software Engineer',
+      // TODO: find correct logo
+      logo: logoAWS,
+      start: '2025/05',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'Amazon Web Services',
+      title: 'SDE II',
+      logo: logoAWS,
+      start: '2021/06',
+      end: '2023/09',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Deloitte Consulting GmbH',
+      title: 'Consultant',
+      logo: logoDeloitte,
+      start: '2019/09',
+      end: '2021/04',
     },
   ]
 
