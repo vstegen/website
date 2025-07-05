@@ -280,10 +280,9 @@ export default async function Home() {
             Software engineer, photographer, and enthusiastic traveler.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I’m Marvin, a software engineer based in Tokyo, Japan. I want to
+            build software empowering regular people and making their life
+            easier. All while exploring the world.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
