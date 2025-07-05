@@ -1,3 +1,4 @@
+import { EMAIL, NAME } from '@/lib/constants'
 import assert from 'assert'
 import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
@@ -10,8 +11,8 @@ export async function GET(req: Request) {
   }
 
   let author = {
-    name: 'Spencer Sharp',
-    email: 'spencer@planetaria.tech',
+    name: NAME,
+    email: EMAIL,
   }
 
   let feed = new Feed({

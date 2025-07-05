@@ -11,6 +11,7 @@ import {
   XIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/image-6.jpg'
+import { EMAIL } from '@/lib/constants'
 
 function SocialLink({
   className,
@@ -116,11 +117,11 @@ export default function About() {
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href={`mailto:${EMAIL}`}
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              {EMAIL}
             </SocialLink>
           </ul>
         </div>
