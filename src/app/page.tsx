@@ -9,6 +9,7 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
+  MastodonIcon,
   XIcon,
 } from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/airbnb.svg'
@@ -22,6 +23,7 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import { EMAIL } from '@/lib/constants'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -284,19 +286,28 @@ export default async function Home() {
             own terms.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
-              href="#"
+              href="https://x.com/vinmarcodes"
+              aria-label="Follow on X"
+              icon={XIcon}
+            />
+            <SocialLink
+              href="https://mastodon.social/@vinmar"
+              aria-label="Follow on Mastodon"
+              icon={MastodonIcon}
+            />
+            <SocialLink
+              href="https://www.instagram.com/marste.snap/"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="#"
+              href="https://github.com/vstegen"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="#"
+              href="https://www.linkedin.com/in/mvstegen/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
