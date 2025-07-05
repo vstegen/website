@@ -8,6 +8,7 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
+  MastodonIcon,
   XIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/image-6.jpg'
@@ -103,18 +104,38 @@ export default function About() {
             </p>
           </div>
         </div>
+        {/* TODO: add more socials */}
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
+            <SocialLink href="https://x.com/vinmarcodes" icon={XIcon}>
               Follow on X
             </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+            <SocialLink
+              href="https://mastodon.social/@vinmar"
+              icon={MastodonIcon}
+              className="mt-4"
+            >
+              Follow on X
+            </SocialLink>
+            <SocialLink
+              href="https://www.instagram.com/marste.snap/"
+              icon={InstagramIcon}
+              className="mt-4"
+            >
               Follow on Instagram
             </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            <SocialLink
+              href="https://github.com/vstegen"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+            <SocialLink
+              href="https://www.linkedin.com/in/mvstegen/"
+              icon={LinkedInIcon}
+              className="mt-4"
+            >
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
