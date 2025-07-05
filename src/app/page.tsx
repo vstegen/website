@@ -201,7 +201,7 @@ function Resume() {
     },
     {
       company: 'Amazon Web Services',
-      title: 'SDE II',
+      title: 'Software Engineer II',
       logo: logoAWS,
       start: '2021/06',
       end: '2023/09',
