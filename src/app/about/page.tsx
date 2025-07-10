@@ -12,7 +12,7 @@ import {
   XIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/image-6.jpg'
-import { EMAIL, NAME } from '@/lib/constants'
+import { EMAIL, FIRST_NAME, NAME } from '@/lib/constants'
 
 function SocialLink({
   className,
@@ -71,35 +71,39 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m {NAME}. I currently live in Tokyo, where I work as a software
-            engineer.
+            Hi, I’m {FIRST_NAME} — a software engineer and hobby photographer
+            living in Tokyo.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Originally from Germany, I've recently made the jump and moved to
+              Tokyo, Japan. Before that, though, I spent 1.5 years in South
+              Korea, and had the best time of my life.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              I went into software engineer because it's the perfect blend of
+              problem solving, creativity, learning that never stops, and
+              typing. Yes, you've read that right. Color me weird, but I
+              absolutely love typing on a keyboard. So this is perfect, isn't
+              it? On top of all that, the high I get when creating something
+              from scratch, a website, a personal tool I'll use, is addicting.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              My journey into photography started, as for many, with my phone on
+              a trip to Singapore in 2021. Primarily taking photos to show this
+              city to my family, I quickly realized that I simply enjoyed the
+              process of capturing what I'm seeing. And lo and behold, a few
+              more trips later, the decision to buy an actual camera was formed.
+              This hobby, taking photos, pulls me into the present, makes me
+              more aware, allows me to notice all the small things, and makes
+              each trip even more fulfilling.
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              This page will be my personal outlet, my world, where I'll share
+              things I love or write about anything that itches that part of my
+              mind. Probably mostly topics about software engineering, projects
+              I'm building, photography, and travel. But who knows, inspiration
+              could strike...
             </p>
           </div>
         </div>
