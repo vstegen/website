@@ -38,15 +38,42 @@ const experience: ExperienceItem[] = [
     position: 'Software Engineer',
     location: 'Tokyo, Japan',
     period: 'May 2025 – Present',
+    technologies: [
+      'TypeScript',
+      'Docker',
+      'AWS',
+      'MySQL',
+      'Redis',
+      'Terraform',
+      'Datadog',
+    ],
     achievements: [],
-    technologies: [],
   },
   {
     company: 'Amazon Development Center Germany GmbH - IDEs',
     position: 'Software Development Engineer II',
     location: 'Berlin, Germany',
     period: 'Jun 2021 – Sep 2023',
-    technologies: ['Go', 'TypeScript', 'AWS', 'Docker', 'EC2', 'ECS', 'EventBridge', 'API Gateway', 'CloudTrail', 'Secret Manager', 'ECR', 'CI/CD', 'Load Testing'],
+    technologies: [
+      'Go',
+      'TypeScript',
+      'Docker',
+      'AWS',
+      'EC2',
+      'ECS',
+      'Fargate',
+      'S3',
+      'DynamoDB',
+      'EventBridge',
+      'API Gateway',
+      'Lambda',
+      'StepFunctions',
+      'CloudTrail',
+      'CloudWatch',
+      'Secret Manager',
+      'ECR',
+      'CI/CD',
+    ],
     achievements: [
       'Designed, implemented, and executed comprehensive load tests, identifying multiple service bottlenecks, leading to successful Amazon CodeCatalyst Dev Environments launch with 0 related issues',
       'Authored threat model for EC2 fleet and ECS task management, uncovering critical gaps in the ECS agent permission handling',
@@ -72,7 +99,16 @@ const experience: ExperienceItem[] = [
     position: 'Consultant',
     location: 'Berlin, Germany',
     period: 'Sep 2019 – Apr 2021',
-    technologies: ['Python', 'Angular', 'Scala', 'Spark', 'AWS S3', 'JavaScript', 'Google Maps API', 'MLflow', 'Python Dash', 'Statistical Analysis', 'Machine Learning'],
+    technologies: [
+      'Python',
+      'TypeScript',
+      'Angular',
+      'Scala',
+      'Spark',
+      'S3',
+      'Google Maps API',
+      'MLflow',
+    ],
     achievements: [
       'Reduced development time by around 40h per deployed web study by designing and developing a modern web study service in Angular, including streamlined custom study configuration',
       'Developed web study service backend in Python, handling user authentication and study result persistence in AWS S3-compatible storage',
@@ -97,7 +133,7 @@ const experience: ExperienceItem[] = [
     position: 'Teaching Assistant',
     location: 'Berlin, Germany',
     period: 'Aug 2016 – Mar 2019',
-    technologies: ['R', 'Statistical Programming', 'Mathematical Modeling', 'Naive Bayes', 'Nadaraya-Watson Estimator'],
+    technologies: ['R', 'Statistical Programming', 'Mathematical Modeling'],
     achievements: [
       'Co-led course of 25+ students on statistical programming with R and assisting with assignments like finding optimal option pricing and simulating cancer growth in patients',
       'Created sample solutions like spam filter based on Naive Bayes classifier and a tool to denoise images using Nadaraya-Watson estimator in R for statistical programming course',
@@ -210,7 +246,7 @@ function ExperienceSection() {
                   {item.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="inline-flex items-center px-2 py-1 text-xs font-medium text-zinc-600 bg-zinc-100 rounded-md dark:text-zinc-300 dark:bg-zinc-800"
+                      className="inline-flex items-center rounded-md bg-zinc-100 px-2 py-1 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300"
                     >
                       {tech}
                     </span>
@@ -284,4 +320,3 @@ export default function Resume() {
     </div>
   )
 }
-
