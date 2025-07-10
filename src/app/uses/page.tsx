@@ -46,38 +46,59 @@ export default function Uses() {
         <ToolsSection title="Workstation">
           <Tool title="14” MacBook Pro, M1 Max, 32GB RAM (2021)">
             Love this machine and even after 4 years, it's still running
-            everything I throw at it. Wish I would have picked a 16” version for
-            when I'm out and about, though.
+            everything I throw at it. Might pick a 16" for the larger screen
+            next time.
           </Tool>
           <Tool title="ZSA Voyager Keyboard">
-            Big fan of ZSA keyboard. Had 2 Ergodox and 2 Moonlander Mark I over
+            Big fan of ZSA keyboards. Had 2 Ergodox and 2 Moonlander Mark I over
             the years and finally settled on the Voyager. Initially, because the
             size is more convenient for traveling, but together with the Ambient
             Nocturnal switches, it's an amazing and customizable typing
             experience.
           </Tool>
           <Tool title="Logitech MX Master 3S">
-            Ergonomic and silent. No issues so far. Unfortunately, the Master 2S
-            ended up having scrolling issues which is why I was forced to buy
-            something new. Don't regret this purchase at all. It's a bit
-            inconvenient to carry around due to its size.
+            Ergonomic and silent. It's a bit inconvenient to carry around due to
+            its size.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Development tools">
-          <Tool title="Neovim">TBD</Tool>
-          <Tool title="Ghostty">TBD</Tool>
+          <Tool title="Neovim">
+            No contest. Fell in love with vim bindings and tried neovim as the
+            more "modern" version. I'm immediately happy whenever I use it.
+          </Tool>
+          <Tool title="Ghostty">
+            Previously used kitty but, after hearing about Ghostty, tried it and
+            have no complains. Easy configuration, fast, native, and has all
+            features I want out of the box.
+          </Tool>
         </ToolsSection>
         <ToolsSection title="Programming Languages">
-          <Tool title="Go">TBD</Tool>
-          <Tool title="Typescript">TBD</Tool>
-          <Tool title="Rust">TBD</Tool>
-          <Tool title="Elixir">TBD</Tool>
-          <Tool title="Python">TBD</Tool>
+          <Tool title="Go">Amazingly productive language.</Tool>
+          <Tool title="Typescript">
+            Your standard language that anyone working in any kind of web
+            development should know.
+          </Tool>
+          <Tool title="Rust">
+            I was immediately fascinated by the syntax when I first saw the
+            language on a stream. Currently a work in progress learning Rust.
+          </Tool>
+          <Tool title="Elixir">
+            Was interested in learning a functional language and the developer
+            satisfaction seemed to be particularly high for Elixir. Phoenix and
+            Liveview look very interesting as well, so let's see how this one
+            goes.
+          </Tool>
         </ToolsSection>
-        <ToolsSection title="Productivity">
-          <Tool title="Alfred">TBD</Tool>
-          <Tool title="Zen">TBD</Tool>
-          <Tool title="Aerospace">TBD</Tool>
+        <ToolsSection title="Other">
+          <Tool title="Alfred">
+            Using this all the time! Search, custom search engines, workflows,
+            integrated clipboard history and more. Don't want to miss this and
+            it's one of the first things I install on a new Mac.
+          </Tool>
+          <Tool title="Zen">
+            Recently found this browser. A fan of the vertical tabs and the
+            split screen.
+          </Tool>
         </ToolsSection>
       </div>
     </SimpleLayout>
