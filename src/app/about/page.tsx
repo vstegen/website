@@ -114,7 +114,7 @@ export default function About() {
               icon={MastodonIcon}
               className="mt-4"
             >
-              Follow on X
+              Follow on Mastodon
             </SocialLink>
             <SocialLink
               href="https://www.instagram.com/marste.snap/"
