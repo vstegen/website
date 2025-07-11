@@ -144,7 +144,7 @@ function Newsletter() {
 interface Role {
   company: string
   title: string
-  logo: ImageProps['src']
+  logo?: ImageProps['src']
   start: string | { label: string; dateTime: string }
   end: string | { label: string; dateTime: string }
 }
@@ -161,7 +161,9 @@ function Role({ role }: { role: Role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+        {role.logo && (
+          <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+        )}
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -192,7 +194,6 @@ function Resume() {
       company: 'Money Forward, Inc',
       title: 'Software Engineer',
       // TODO: find correct logo
-      logo: logoAWS,
       start: '2025/05',
       end: {
         label: 'Present',
@@ -314,7 +315,8 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/* TODO: make this component work */}
+            {/* <Newsletter /> */}
             <Resume />
           </div>
         </div>
