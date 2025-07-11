@@ -9,7 +9,12 @@ import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 
-const projects = [
+const projects: {
+  name: string
+  description: string
+  link: { href: string; label: string }
+  logo: any // should be an svg file
+}[] = [
   {
     name: 'Planetaria',
     description:
