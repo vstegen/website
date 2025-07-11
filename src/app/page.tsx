@@ -73,7 +73,37 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
       <path
         d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
+        stroke="currentColor"
         strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function WritingIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path
+        d="M5 12H19"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5 18H19"
+        stroke="currentColor"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -93,6 +123,22 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <Card.Description>{article.description}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
+  )
+}
+
+function ArticlesEmptyState() {
+  return (
+    <div className="flex flex-col items-center justify-center py-12 text-center">
+      <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+        <WritingIcon className="h-6 w-6 text-zinc-400 dark:text-zinc-500" />
+      </div>
+      <h3 className="mt-4 text-lg font-semibold text-zinc-800 dark:text-zinc-100">
+        Articles Coming Soon
+      </h3>
+      <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+        Working on some thoughts to share.
+      </p>
+    </div>
   )
 }
 
@@ -314,9 +360,13 @@ export default async function Home() {
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
+            {articles.length === 0 ? (
+              <ArticlesEmptyState />
+            ) : (
+              articles.map((article) => (
+                <Article key={article.slug} article={article} />
+              ))
+            )}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             {/* TODO: make this component work */}
