@@ -42,7 +42,7 @@ const technologies = {
 
 const experience: ExperienceItem[] = [
   {
-    company: 'MoneyForward',
+    company: 'MoneyForward, Inc',
     position: 'Software Engineer',
     location: 'Tokyo, Japan',
     period: 'May 2025 – Present',
@@ -98,7 +98,7 @@ const experience: ExperienceItem[] = [
       // 'Updated internal API to expose public and private IP of Dev Environments to improve overall stability of public API service',
       // 'Created a dynamic and automatically updating operations dashboard for real-time monitoring of live regions and APIs, streamlining oncall processes',
       'Reduced CI/CD pipeline latency by introducing a specialized stage for non-operational regions with pass-through option, significantly improving pipeline blocked time',
-      'Achieved operational readiness (ORR) approval for service launch by implementing region-specific deployment safety protocols and creating operational tooling, dashboards, and over 200 alarms',
+      'Achieved operational readiness (ORR) approval for service launch by implementing region-specific deployment safety protocols and creating operational tooling, dashboards, and over 200 additional alarms',
       // "Mitigated microservice restarts by reducing memory leaks by over 90% by using Go's profiling tool, pprof, enhancing service stability",
       // 'Developed a custom Docker credentials helper in Go to allow customers to use Docker images in private AWS ECR repositories for launching their Dev Environments',
       // 'Implemented mechanism for fetching and injection of customer secrets from AWS Secret Manager as environment variables into their Dev Environments',
@@ -201,7 +201,7 @@ function Section({
 
 function TechnologiesSection() {
   return (
-    <Section title="Technologies and Languages">
+    <Section title="Skills">
       <div className="space-y-2 text-sm">
         <div>
           <span className="font-medium text-zinc-800 dark:text-zinc-100">
