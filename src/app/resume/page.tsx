@@ -16,6 +16,7 @@ interface EducationItem {
   institution: string
   location: string
   period: string
+  thesis: string
 }
 
 const technologies = {
@@ -159,12 +160,15 @@ const education: EducationItem[] = [
     institution: 'Humboldt University of Berlin',
     location: 'Berlin, Germany',
     period: '2016 – 2019',
+    thesis:
+      'The estimation of signal-to-noise ratios in high-dimensional linear models',
   },
   {
     degree: 'B.Sc. Mathematics',
     institution: 'Humboldt University of Berlin',
     location: 'Berlin, Germany',
     period: '2012 – 2016',
+    thesis: 'The Skohorod MI Topology and weak Convergence',
   },
 ]
 
@@ -305,6 +309,9 @@ function EducationSection() {
                 <div>{item.location}</div>
               </div>
             </div>
+            <span className="text-sm text-zinc-600 dark:text-zinc-400">
+              Thesis: {item.thesis}
+            </span>
           </div>
         ))}
       </div>
