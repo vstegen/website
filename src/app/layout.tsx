@@ -13,11 +13,6 @@ export const metadata: Metadata = {
   },
   description:
     'I’m Marvin, a software engineer based in Tokyo, Japan. I want to build software empowering regular people and making their life easier. All while exploring the world.',
-  alternates: {
-    types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-    },
-  },
 }
 
 export default function RootLayout({
