@@ -88,8 +88,8 @@ function EmptyState() {
         Projects Coming Soon
       </h3>
       <p className="mt-2 max-w-md text-base text-sm text-zinc-600 dark:text-zinc-400">
-        I'm currently working on some exciting projects that I'll be sharing
-        here soon.
+        I&apos;m currently working on some exciting projects that I&apos;ll be
+        sharing here soon.
       </p>
     </div>
   )

@@ -79,7 +79,7 @@ function EmptyState() {
         Articles Coming Soon
       </h3>
       <p className="mt-2 max-w-md text-base text-sm text-zinc-600 dark:text-zinc-400">
-        I'm working on sharing my thoughts on software development, life in
+        I&apos;m working on sharing my thoughts on software development, life in
         Japan, and building in public as we speak.
       </p>
     </div>

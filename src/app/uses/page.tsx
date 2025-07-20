@@ -45,26 +45,27 @@ export default function Uses() {
       <div className="space-y-20">
         <ToolsSection title="Workstation">
           <Tool title="14” MacBook Pro, M1 Max, 32GB RAM (2021)">
-            Love this machine and even after 4 years, it's still running
-            everything I throw at it. Might pick a 16" for the larger screen
-            next time.
+            Love this machine and even after 4 years, it&apos;s still running
+            everything I throw at it. Might pick a 16&quot; for the larger
+            screen next time.
           </Tool>
           <Tool title="ZSA Voyager Keyboard">
             Big fan of ZSA keyboards. Had 2 Ergodox and 2 Moonlander Mark I over
             the years and finally settled on the Voyager. Initially, because the
             size is more convenient for traveling, but together with the Ambient
-            Nocturnal switches, it's an amazing and customizable typing
+            Nocturnal switches, it&apos;s an amazing and customizable typing
             experience.
           </Tool>
           <Tool title="Logitech MX Master 3S">
-            Ergonomic and silent. It's a bit inconvenient to carry around due to
-            its size.
+            Ergonomic and silent. It&apos;s a bit inconvenient to carry around
+            due to its size.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Development tools">
           <Tool title="Neovim">
             No contest. Fell in love with vim bindings and tried neovim as the
-            more "modern" version. I'm immediately happy whenever I use it.
+            more &quot;modern&quot; version. I&apos;m immediately happy whenever
+            I use it.
           </Tool>
           <Tool title="Ghostty">
             Previously used kitty but, after hearing about Ghostty, tried it and
@@ -85,15 +86,15 @@ export default function Uses() {
           <Tool title="Elixir">
             Was interested in learning a functional language and the developer
             satisfaction seemed to be particularly high for Elixir. Phoenix and
-            Liveview look very interesting as well, so let's see how this one
-            goes.
+            Liveview look very interesting as well, so let&apos;s see how this
+            one goes.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Other">
           <Tool title="Alfred">
             Using this all the time! Search, custom search engines, workflows,
-            integrated clipboard history and more. Don't want to miss this and
-            it's one of the first things I install on a new Mac.
+            integrated clipboard history and more. Don&apos;t want to miss this
+            and it&apos;s one of the first things I install on a new Mac.
           </Tool>
           <Tool title="Zen">
             Recently found this browser. A fan of the vertical tabs and the

@@ -76,34 +76,36 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              Originally from Germany, I've recently made the jump and moved to
-              Tokyo, Japan. Before that, though, I spent 1.5 years in South
-              Korea and had the best time of my life.
+              Originally from Germany, I&apos;ve recently made the jump and
+              moved to Tokyo, Japan. Before that, though, I spent 1.5 years in
+              South Korea and had the best time of my life.
             </p>
             <p>
-              I went into software engineer because it's the perfect blend of
-              problem solving, creativity, learning that never stops, and
-              typing. Yes, you've read that right. Color me weird, but I
-              absolutely love typing on a keyboard. So this is perfect, isn't
-              it? On top of all that, the high I get when creating something
-              from scratch, a website, a personal tool I'll use, is addicting.
+              I went into software engineer because it&apos;s the perfect blend
+              of problem solving, creativity, learning that never stops, and
+              typing. Yes, you&apos;ve read that right. Color me weird, but I
+              absolutely love typing on a keyboard. So this is perfect,
+              isn&apos;t it? On top of all that, the high I get when creating
+              something from scratch, a website, a personal tool I&apos;ll use,
+              is addicting.
             </p>
             <p>
               My journey into photography started, as for many, with my phone on
               a trip to Singapore in 2021. Primarily taking photos to show this
               city to my family, I quickly realized that I enjoyed the process
-              of capturing what I'm seeing. And lo and behold, a few more trips
-              later, the decision to buy an actual camera was formed. This
+              of capturing what I&apos;m seeing. And lo and behold, a few more
+              trips later, the decision to buy an actual camera was formed. This
               hobby, taking photos, pulls me into the present, makes me more
               aware, allows me to notice all the small things, and makes each
               trip I take even more fulfilling.
             </p>
             <p>
-              This page will be my personal outlet, my world, where I'll share
-              things I love, or write about anything that itches that part of my
-              mind. Probably mostly topics about software engineering, projects
-              I'm building, photography, and travel. But who knows, inspiration
-              could strike at any time and the topic could be anything...
+              This page will be my personal outlet, my world, where I&apos;ll
+              share things I love, or write about anything that itches that part
+              of my mind. Probably mostly topics about software engineering,
+              projects I&apos;m building, photography, and travel. But who
+              knows, inspiration could strike at any time and the topic could be
+              anything...
             </p>
           </div>
         </div>
