@@ -77,17 +77,21 @@ export default function About() {
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               Originally from Germany, I&apos;ve recently made the jump and
-              moved to Tokyo, Japan. Before that, though, I spent 1.5 years in
-              South Korea and had the best time of my life.
+              moved to Tokyo, Japan.
             </p>
             <p>
-              I went into software engineer because it&apos;s the perfect blend
-              of problem solving, creativity, learning that never stops, and
-              typing. Yes, you&apos;ve read that right. Color me weird, but I
-              absolutely love typing on a keyboard. So this is perfect,
-              isn&apos;t it? On top of all that, the high I get when creating
-              something from scratch, a website, a personal tool I&apos;ll use,
-              is addicting.
+              The dream, my goal, as a few people will share, is freedom. Being
+              able to work from anywhere. Whether it&apos;s in a Ger in
+              Mongolia, a hotel room, or simply a nice café in the neighborhood.
+            </p>
+            <p>
+              For me, software engineering is the perfect blend of problem
+              solving, creativity, never-ending learning, and typing. Yes,
+              you&apos;ve read that correctly. Color me weird, but I absolutely
+              love typing on a keyboard. So this profession seems like the ideal
+              fit, doesn&apos;t it? On top of all that, the high I get when
+              creating something from scratch, a website, a personal tool, is
+              addicting.
             </p>
             <p>
               My journey into photography started, as for many, with my phone on
@@ -100,12 +104,12 @@ export default function About() {
               trip I take even more fulfilling.
             </p>
             <p>
-              This page will be my personal outlet, my world, where I&apos;ll
-              share things I love, or write about anything that itches that part
-              of my mind. Probably mostly topics about software engineering,
-              projects I&apos;m building, photography, and travel. But who
-              knows, inspiration could strike at any time and the topic could be
-              anything...
+              This page, my personal outlet, is where I will document my journey
+              toward freedom. Share the things I love, or write about anything
+              that itches that part of my mind. Probably mostly topics about
+              software engineering, projects I&apos;m building, photography, and
+              travel. But who knows, inspiration could strike at any time and
+              the topic could be anything...
             </p>
           </div>
         </div>
