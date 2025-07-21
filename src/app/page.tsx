@@ -325,8 +325,8 @@ export default async function Home() {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Hi, I&apos;m Marvin — a German software engineer based in Tokyo,
             Japan. Welcome to my outlet where I put my thoughts and whatever
-            moves my mind onto virtual pages, as well as documenting the
-            projects I&apos;m working on.
+            moves my mind onto virtual pages, as well as document the projects
+            I&apos;m working on.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
