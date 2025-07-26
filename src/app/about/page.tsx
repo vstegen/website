@@ -83,6 +83,7 @@ export default function About() {
               The dream, my goal, as a few people will share, is freedom. Being
               able to work from anywhere. Whether it&apos;s in a Ger in
               Mongolia, a hotel room, or simply a nice café in the neighborhood.
+              Being able to work on things that matter to me.
             </p>
             <p>
               For me, software engineering is the perfect blend of problem
@@ -90,22 +91,22 @@ export default function About() {
               you&apos;ve read that correctly. Color me weird, but I absolutely
               love typing on a keyboard. So this profession seems like the ideal
               fit, doesn&apos;t it? On top of all that, the high I get when
-              creating something from scratch, a website, a personal tool, is
-              addicting.
+              creating something from scratch is addicting. Be it a website, a
+              personal tool, or something else.
             </p>
             <p>
-              My journey into photography started, as for many, with my phone on
-              a trip to Singapore in 2021. Primarily taking photos to show this
-              city to my family, I quickly realized that I enjoyed the process
-              of capturing what I&apos;m seeing. And lo and behold, a few more
-              trips later, the decision to buy an actual camera was formed. This
-              hobby, taking photos, pulls me into the present, makes me more
-              aware, allows me to notice all the small things, and makes each
-              trip I take even more fulfilling.
+              My journey into photography started, as for many, with my phone —
+              on a trip to Singapore in 2021. Primarily taking photos to show
+              this city to my family, I quickly realized that I enjoyed the
+              process of capturing what I&apos;m seeing. And lo and behold, a
+              few more trips later, the decision to buy an actual camera was
+              formed. This hobby, taking photos, pulls me into the present,
+              makes me more aware, allows me to notice all the small things, and
+              makes each trip I take even more fulfilling.
             </p>
             <p>
               This page, my personal outlet, is where I will document my journey
-              toward freedom. Share the things I love, or write about anything
+              toward freedom, share the things I love, or write about anything
               that itches that part of my mind. Probably mostly topics about
               software engineering, projects I&apos;m building, photography, and
               travel. But who knows, inspiration could strike at any time and
