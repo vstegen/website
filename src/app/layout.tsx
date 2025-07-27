@@ -4,7 +4,7 @@ import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
-import { NAME } from '@/lib/constants'
+import { NAME, SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: {
@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   },
   description:
     'I’m Marvin, a software engineer based in Tokyo, Japan. I want to build software empowering regular people and making their life easier. All while exploring the world.',
+  alternates: {
+    types: {
+      'application/rss+xml': `${SITE_URL}/feed.xml`,
+    },
+  },
 }
 
 export default function RootLayout({
