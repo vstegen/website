@@ -4,6 +4,9 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
+import logoKeepsakeBox from '@/images/logos/keepsakebox-transparent.svg'
+import logoWhiskly from '@/images/logos/whiskly-transparent.svg'
+
 const projects: {
   name: string
   description: string
@@ -15,14 +18,14 @@ const projects: {
     description:
       'Give the gift of memories with a personalized website that captures your unique story together. Combine heartfelt letters, voice messages, photos, and special moments into one stunning digital keepsake.',
     link: { href: 'keepsakebox.app', label: 'keepsakebox.app' },
-    logo: '',
+    logo: logoKeepsakeBox,
   },
   {
     name: 'Whiskly',
     description:
       'Build your dream recipe collection by pulling dishes from anywhere online, then watch the magic happen. Scale recipes to any serving size, get smart ingredient swaps for dietary needs or empty pantries, and create organized shopping lists that make every trip to the store count.',
     link: { href: 'whiskly.io', label: 'whiskly.io' },
-    logo: '',
+    logo: logoWhiskly,
   },
 ]
 
