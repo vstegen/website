@@ -44,15 +44,10 @@ export async function POST(request: NextRequest) {
       status: 'active',
     })
 
-    if (response.status === 201) {
+    if (response.status === 200 || response.status === 201) {
       return NextResponse.json({
         success: true,
         message: "Thanks! I'll let you know when there is new content.",
-      })
-    } else if (response.status === 200) {
-      return NextResponse.json({
-        success: true,
-        message: "Thanks! You're already subscribed.",
       })
     } else {
       return NextResponse.json(
