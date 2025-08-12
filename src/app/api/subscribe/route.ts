@@ -43,6 +43,7 @@ export async function POST(request: NextRequest) {
       groups: ['161066195324240973'],
       status: 'active',
     })
+    console.log(`Result of createOrUpdate: ${JSON.stringify(response)}`)
 
     if (response.status === 200 || response.status === 201) {
       return NextResponse.json({
@@ -56,6 +57,7 @@ export async function POST(request: NextRequest) {
       )
     }
   } catch (error) {
+    console.error(`Failed to call createOrUpdate`, error)
     return NextResponse.json(
       { success: false, message: 'Sorry, seems like something went wrong.' },
       { status: 500 },
