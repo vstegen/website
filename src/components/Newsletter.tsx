@@ -36,7 +36,6 @@ export default function Newsletter() {
         setMessage(data.message || 'Something went wrong. Please try again.')
       }
     } catch (error) {
-      console.error('Subscription error:', error)
       setStatus('error')
       setMessage('Something went wrong. Please try again.')
     }
