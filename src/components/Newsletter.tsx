@@ -16,6 +16,8 @@ export default function Newsletter() {
 
     setStatus('loading')
 
+    console.log('submitting the newsletter form')
+
     try {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
