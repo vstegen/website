@@ -24,10 +24,12 @@ const technologies = {
   technologies: [
     'AWS',
     'Docker',
-    'Terraform',
-    'Git',
-    'Node.js',
     'ElasticSearch',
+    'MySQL',
+    'Terraform',
+    'Node.js',
+    'Git',
+    'Datadog',
   ],
   other: [
     'Distributed Systems',
@@ -55,7 +57,14 @@ const experience: ExperienceItem[] = [
       'Terraform',
       'Datadog',
     ],
-    achievements: [],
+    achievements: [
+      'Implemented an AI agent via midscene.js and puppeteer allowing AI-supported user provisioning saving 1 day of development time for each utilizing service',
+      'Imrproved customer request latency by developing request priorization based on request types leading to less wait times for user management on external services',
+      'Enhancing Github service integration by implementing Github App authentication allowing for more robust user management',
+      'Improved product coverage related to account management by integrating multiple new services via API or puppeteer scraping clients',
+      'Delived third-party service usage reports based on historic request data allowing feature priotization for highly-used services',
+      'Automated customer workspaces getting unstuck by implementing a new command with scheduled execution via AWS CloudWatch',
+    ],
   },
   {
     company: 'Amazon Development Center Germany GmbH - IDEs',
