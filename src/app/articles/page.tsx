@@ -2,7 +2,7 @@ import { type Metadata } from 'next'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { type ArticleWithSlug, getAllArticles, getArticlesByTag } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 function Article({ article }: { article: ArticleWithSlug }) {
@@ -69,25 +69,39 @@ function WritingIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function EmptyState() {
+function EmptyState({ tag }: { tag?: string }) {
   return (
     <div className="flex flex-col items-center justify-center py-20 text-center">
       <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         <WritingIcon className="h-8 w-8 text-zinc-400 dark:text-zinc-500" />
       </div>
       <h3 className="mt-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
-        Articles Coming Soon
+        {tag ? `No articles tagged with '${tag}' yet` : 'Articles Coming Soon'}
       </h3>
       <p className="mt-2 max-w-md text-base text-sm text-zinc-600 dark:text-zinc-400">
-        I&apos;m working on sharing my thoughts on software development, life in
-        Japan, and building in public as we speak.
+        {tag ? (
+          <>
+            There are no articles with the tag &apos;{tag}&apos;. Try browsing{' '}
+            <a href="/articles" className="text-teal-500 hover:text-teal-600 dark:hover:text-teal-400">all articles</a> instead.
+          </>
+        ) : (
+          <>
+            I&apos;m working on sharing my thoughts on software development, life in
+            Japan, and building in public as we speak.
+          </>
+        )}
       </p>
     </div>
   )
 }
 
-export default async function ArticlesIndex() {
-  let articles = await getAllArticles()
+export default async function ArticlesIndex({
+  searchParams,
+}: {
+  searchParams: Promise<{ tag?: string }>
+}) {
+  const { tag } = await searchParams
+  let articles = tag ? await getArticlesByTag(tag) : await getAllArticles()
 
   return (
     <SimpleLayout
@@ -95,7 +109,7 @@ export default async function ArticlesIndex() {
       intro="All of my long-form thoughts on programming, living abroad, building in public, and more, collected in chronological order."
     >
       {articles.length === 0 ? (
-        <EmptyState />
+        <EmptyState tag={tag} />
       ) : (
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">
