@@ -5,6 +5,7 @@ interface Article {
   description: string
   author: string
   date: string
+  tags?: string[]
 }
 
 export interface ArticleWithSlug extends Article {
@@ -33,4 +34,14 @@ export async function getAllArticles() {
   let articles = await Promise.all(articleFilenames.map(importArticle))
 
   return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
+}
+
+export async function getArticlesByTag(tag: string) {
+  let articles = await getAllArticles()
+  return articles.filter(
+    (article) =>
+      article.tags?.some(
+        (t) => t.toLowerCase() === tag.toLowerCase(),
+      ),
+  )
 }

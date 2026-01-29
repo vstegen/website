@@ -2,7 +2,7 @@ import { type Metadata } from 'next'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { type ArticleWithSlug, getAllArticles, getArticlesByTag } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 function Article({ article }: { article: ArticleWithSlug }) {
@@ -86,8 +86,13 @@ function EmptyState() {
   )
 }
 
-export default async function ArticlesIndex() {
-  let articles = await getAllArticles()
+export default async function ArticlesIndex({
+  searchParams,
+}: {
+  searchParams: Promise<{ tag?: string }>
+}) {
+  const { tag } = await searchParams
+  let articles = tag ? await getArticlesByTag(tag) : await getAllArticles()
 
   return (
     <SimpleLayout
