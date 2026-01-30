@@ -22,6 +22,19 @@ function Article({ article }: { article: ArticleWithSlug }) {
         </Card.Eyebrow>
         <Card.Description>{article.description}</Card.Description>
         <Card.Cta>Read article</Card.Cta>
+        {article.tags && article.tags.length > 0 && (
+          <div className="mt-2 flex flex-wrap gap-x-2 gap-y-1">
+            {article.tags.map((tag) => (
+              <a
+                key={tag}
+                href={`/articles/?tag=${encodeURIComponent(tag)}`}
+                className="text-sm text-teal-500 hover:text-teal-600 dark:hover:text-teal-400"
+              >
+                #{tag}
+              </a>
+            ))}
+          </div>
+        )}
       </Card>
       <Card.Eyebrow
         as="time"

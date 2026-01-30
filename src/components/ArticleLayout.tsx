@@ -62,6 +62,19 @@ export function ArticleLayout({
             <Prose className="mt-8" data-mdx-content>
               {children}
             </Prose>
+            {article.tags && article.tags.length > 0 && (
+              <div className="mt-8 flex flex-wrap gap-x-3 gap-y-2">
+                {article.tags.map((tag) => (
+                  <a
+                    key={tag}
+                    href={`/articles/?tag=${encodeURIComponent(tag)}`}
+                    className="text-sm text-teal-500 hover:text-teal-600 dark:hover:text-teal-400"
+                  >
+                    #{tag}
+                  </a>
+                ))}
+              </div>
+            )}
           </article>
         </div>
       </div>
