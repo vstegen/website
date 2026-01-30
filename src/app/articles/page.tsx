@@ -2,7 +2,11 @@ import { type Metadata } from 'next'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { type ArticleWithSlug, getAllArticles, getArticlesByTag } from '@/lib/articles'
+import {
+  type ArticleWithSlug,
+  getAllArticles,
+  getArticlesByTag,
+} from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 function Article({ article }: { article: ArticleWithSlug }) {
@@ -22,19 +26,6 @@ function Article({ article }: { article: ArticleWithSlug }) {
         </Card.Eyebrow>
         <Card.Description>{article.description}</Card.Description>
         <Card.Cta>Read article</Card.Cta>
-        {article.tags && article.tags.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-x-2 gap-y-1">
-            {article.tags.map((tag) => (
-              <a
-                key={tag}
-                href={`/articles/?tag=${encodeURIComponent(tag)}`}
-                className="text-sm text-teal-500 hover:text-teal-600 dark:hover:text-teal-400"
-              >
-                #{tag}
-              </a>
-            ))}
-          </div>
-        )}
       </Card>
       <Card.Eyebrow
         as="time"
@@ -95,12 +86,18 @@ function EmptyState({ tag }: { tag?: string }) {
         {tag ? (
           <>
             There are no articles with the tag &apos;{tag}&apos;. Try browsing{' '}
-            <a href="/articles" className="text-teal-500 hover:text-teal-600 dark:hover:text-teal-400">all articles</a> instead.
+            <a
+              href="/articles"
+              className="text-teal-500 hover:text-teal-600 dark:hover:text-teal-400"
+            >
+              all articles
+            </a>{' '}
+            instead.
           </>
         ) : (
           <>
-            I&apos;m working on sharing my thoughts on software development, life in
-            Japan, and building in public as we speak.
+            I&apos;m working on sharing my thoughts on software development,
+            life in Japan, and building in public as we speak.
           </>
         )}
       </p>
