@@ -36,6 +36,15 @@ export async function getAllArticles() {
   return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
 }
 
+export async function getAllTags() {
+  let articles = await getAllArticles()
+  let tagSet = new Set<string>()
+  articles.forEach((article) => {
+    article.tags?.forEach((tag) => tagSet.add(tag.toLowerCase()))
+  })
+  return Array.from(tagSet).sort()
+}
+
 export async function getArticlesByTag(tag: string) {
   let articles = await getAllArticles()
   return articles.filter(
