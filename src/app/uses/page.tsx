@@ -49,12 +49,12 @@ export default function Uses() {
             everything I throw at it. At times, I&apos;m certainly missing a
             slightly larger screen.
           </Tool>
-          <Tool title="ZSA Voyager Keyboard">
-            Big fan of ZSA keyboards. Had 2 Ergodox and 2 Moonlander Mark I over
-            the years and finally settled on the Voyager. Initially, because the
-            size is more convenient for traveling, but together with the Ambient
-            Nocturnal switches, it&apos;s an amazing and customizable typing
-            experience.
+          <Tool title="Corne v4.1">
+            The Corne with HMX Xinhai switches is the most recent addition. I
+            missed the feeling and variety of MX switches after using choc
+            switches with the ZSA Voyager for a while. The Xinhai are light
+            enough to comfortable type on without getting exhausted and I&apos;m
+            exicted by their sound whenever I type.
           </Tool>
           <Tool title="Logitech MX Master 3S">
             Ergonomic and silent. Nothing more to say. I can&apos;t use
@@ -98,10 +98,13 @@ export default function Uses() {
           </Tool>
         </ToolsSection>
         <ToolsSection title="Other">
-          <Tool title="Alfred">
-            Using this all the time! Search, custom search engines, workflows,
-            integrated clipboard history and more. Don&apos;t want to miss this
-            and it&apos;s one of the first things I install on a new Mac.
+          <Tool title="Monarch">
+            Using this all the time! Search, custom search engines, integrated
+            clipboard history and more. Don&apos;t want to miss this and
+            it&apos;s one of the first things I install on a new Mac. I've
+            previously used Alfred instead, but on my work machine the search
+            started up slowly which caused issue. Haven't experienced this with
+            Monarch yet.
           </Tool>
           <Tool title="Little Snitch">
             The first thing I install on any new machine. Monitoring and
