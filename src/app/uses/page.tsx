@@ -101,10 +101,10 @@ export default function Uses() {
           <Tool title="Monarch">
             Using this all the time! Search, custom search engines, integrated
             clipboard history and more. Don&apos;t want to miss this and
-            it&apos;s one of the first things I install on a new Mac. I've
+            it&apos;s one of the first things I install on a new Mac. I&apos;ve
             previously used Alfred instead, but on my work machine the search
-            started up slowly which caused issue. Haven't experienced this with
-            Monarch yet.
+            started up slowly which caused issue. Haven&apos;t experienced this
+            with Monarch yet.
           </Tool>
           <Tool title="Little Snitch">
             The first thing I install on any new machine. Monitoring and
