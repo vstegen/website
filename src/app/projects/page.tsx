@@ -31,6 +31,15 @@ const projects: {
       'Dotfiles to my environment. Includes configuration for Neovim, Ghostty as well as keymaps.',
     link: { href: 'https://github.com/vstegen/dotfiles', label: 'dotfiles' },
   },
+  {
+    name: 'photo-cleanup',
+    description:
+      'A small utility that deleted JPEG files without a corresponding RAW file.',
+    link: {
+      href: 'https://github.com/vstegen/photo-cleanup',
+      label: 'photo-cleanup',
+    },
+  },
 ]
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
