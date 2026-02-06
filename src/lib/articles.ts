@@ -45,3 +45,24 @@ export async function getArticlesByTag(tag: string) {
       ),
   )
 }
+
+export async function getArticlesByTags(tags: string[]) {
+  let articles = await getAllArticles()
+  let lowerTags = tags.map((t) => t.toLowerCase())
+  return articles.filter((article) =>
+    article.tags?.some((t) => lowerTags.includes(t.toLowerCase())),
+  )
+}
+
+export async function getAllTags(): Promise<string[]> {
+  let articles = await getAllArticles()
+  let tagSet = new Set<string>()
+  for (let article of articles) {
+    if (article.tags) {
+      for (let tag of article.tags) {
+        tagSet.add(tag.toLowerCase())
+      }
+    }
+  }
+  return Array.from(tagSet).sort((a, b) => a.localeCompare(b))
+}

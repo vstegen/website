@@ -2,10 +2,12 @@ import { type Metadata } from 'next'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { TagFilter } from '@/components/TagFilter'
 import {
   type ArticleWithSlug,
   getAllArticles,
-  getArticlesByTag,
+  getAllTags,
+  getArticlesByTags,
 } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -73,26 +75,29 @@ function WritingIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function EmptyState({ tag }: { tag?: string }) {
+function EmptyState({ tags }: { tags?: string[] }) {
+  let hasFilters = tags && tags.length > 0
+
   return (
     <div className="flex flex-col items-center justify-center py-20 text-center">
       <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         <WritingIcon className="h-8 w-8 text-zinc-400 dark:text-zinc-500" />
       </div>
       <h3 className="mt-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
-        {tag ? `No articles tagged with '${tag}' yet` : 'Articles Coming Soon'}
+        {hasFilters ? 'No matching articles' : 'Articles Coming Soon'}
       </h3>
       <p className="mt-2 max-w-md text-base text-sm text-zinc-600 dark:text-zinc-400">
-        {tag ? (
+        {hasFilters ? (
           <>
-            There are no articles with the tag &apos;{tag}&apos;. Try browsing{' '}
+            No articles match the selected tags. Try adjusting your filters or
+            browse{' '}
             <a
               href="/articles"
               className="text-teal-500 hover:text-teal-600 dark:hover:text-teal-400"
             >
               all articles
-            </a>{' '}
-            instead.
+            </a>
+            .
           </>
         ) : (
           <>
@@ -108,18 +113,29 @@ function EmptyState({ tag }: { tag?: string }) {
 export default async function ArticlesIndex({
   searchParams,
 }: {
-  searchParams: Promise<{ tag?: string }>
+  searchParams: Promise<{ tag?: string | string[] }>
 }) {
   const { tag } = await searchParams
-  let articles = tag ? await getArticlesByTag(tag) : await getAllArticles()
+
+  let selectedTags: string[] = []
+  if (tag) {
+    selectedTags = Array.isArray(tag) ? tag : [tag]
+  }
+
+  let allTags = await getAllTags()
+  let articles =
+    selectedTags.length > 0
+      ? await getArticlesByTags(selectedTags)
+      : await getAllArticles()
 
   return (
     <SimpleLayout
       title="Writing on software development, life in Japan, and whatever comes to mind."
       intro="All of my long-form thoughts on programming, living abroad, building in public, and more, collected in chronological order."
     >
+      <TagFilter allTags={allTags} selectedTags={selectedTags} />
       {articles.length === 0 ? (
-        <EmptyState tag={tag} />
+        <EmptyState tags={selectedTags} />
       ) : (
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">
