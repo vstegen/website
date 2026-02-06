@@ -27,6 +27,10 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# gallery generated files (rebuild with: npm run process-gallery)
+/public/gallery/thumbnails/
+/public/gallery/full/
+
 # vercel
 .vercel
 
