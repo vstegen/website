@@ -6,6 +6,7 @@ interface Article {
   author: string
   date: string
   tags?: string[]
+  keywords?: string[]
 }
 
 export interface ArticleWithSlug extends Article {

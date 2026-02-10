@@ -1,4 +1,5 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
+import { SITE_URL } from '@/lib/constants'
 import horses from "./horses.JPG"
 import race from "./horse-race.JPG"
 import airag from "./airag.JPG"
@@ -8,13 +9,33 @@ export const article = {
   author: 'Marvin van Stegen',
   date: '2025-11-30',
   title: 'Goats, Ger, and Sunburn - Part 1',
-  description: '',
+  description: "Experience Mongolia's legendary Naadam Festival through a traveler's eyes. From tire-loving goats blocking dusty roads to child jockeys racing horses across the steppe, discover what makes attending Naadam near Ulaanbaatar unforgettable. Plus: why you need sunscreen in Mongolia.",
   tags: ['travel', 'mongolia'],
+  keywords: ['Naadam Festival', 'Mongolia travel', 'Khui Doloon Khudag', 'Mongolian horse racing', 'Ulaanbaatar', 'child jockeys', 'airag', 'fermented horse milk', 'nomadic culture'],
 }
 
 export const metadata = {
   title: article.title,
   description: article.description,
+  authors: [{ name: article.author }],
+  keywords: article.keywords,
+  openGraph: {
+    title: article.title,
+    description: article.description,
+    type: 'article',
+    publishedTime: article.date,
+    authors: [article.author],
+    url: `${SITE_URL}/articles/mongolia-2025-part-1`,
+  },
+  twitter: {
+    card: 'summary',
+    creator: '@vinmarcodes',
+    title: article.title,
+    description: article.description,
+  },
+  alternates: {
+    canonical: `${SITE_URL}/articles/mongolia-2025-part-1`,
+  },
 }
 
 export default (props) => <ArticleLayout article={article} {...props} />
@@ -27,7 +48,7 @@ One day earlier, I stepped into Mongolia for the first time, and right when I wa
 
 Being here during Naadam meant we had to check out the festivities in Khui Doloon Khudag, the horse racing grounds outside of Ulaanbaatar. We can now confidently say that Google Maps navigation is not to be trusted as soon as you leave the city. After consulting Google on how to get to the grounds, we got into the car, thinking it would be smooth sailing with our trusty advisor in hands. How wrong we were. It all started when we passed the toll checkpoints at the city gates.
 
-<Image src={naadam} alt="Khui Doloon Khudag during Naadam" />
+<Image src={naadam} alt="Naadam Festival grounds at Khui Doloon Khudag outside Ulaanbaatar" />
 
 Shortly after getting onto the highway, the command "turn left" rang from the phone. There was only a small problem: there was no way to turn left. It was a highway, and even if we wanted to, the fence neatly separating the two directions would have stopped us. Maybe a few too many people trusted Google here... We looked at each with raised eyebrows, clearly a bit confused by this situation. Not only was it impossible to turn left, but there also wasn't a visible road to turn left onto - unless... They couldn't mean that unpaved strip of sand, could they?
 
@@ -39,7 +60,7 @@ Was trusting Google a mistake? Right when we were both questioning ourselves whe
 
 Did he truly know what he was talking about? We reached the top of yet another tiny hill, and it definitely had been more than "two hills" since our encounter with the stranger. There was grass as far as the eye could see, circled by mountain ranges in the distance, broken only by the two single tracks of dust carved carefully by countless cars exploring the wilderness before us. No person or car in sight. Only us, in the middle of nowhere.
 
-<Image src={horses} alt="Two horses hugging each other" />
+<Image src={horses} alt="Two Mongolian horses during Naadam celebrations" />
 
 Making our way into the valley from our vantage point, small dark dots came into view right in front of the ascent of yet another hill. He couldn't have been that bad at counting, could he? The closer we got, the clearer it became: a tribe of goats chilling in the middle of the tracks.
 
@@ -52,13 +73,13 @@ What should have been a swift bus ride turned out to take well over 20 minutes f
 
 The fields of Khui Doloon Khudag were filled with Mongolians of all ages, and it seemed like at least half of them brought their horses. I've never seen this many horses in my life. It was pure chaos. There were stalls upon stalls selling small items, drinks, and all kinds of local dishes. A drink one just has to try when in Mongolia is airag - fermented horse milk. Fizzy and sour. What a weird combination. Not bad by any means, though my girlfriend certainly was not impressed with that one. Apparently, it was a bad version of the drink. There is nothing I've ever had that I could compare this to. This is something you have to taste to understand.
 
-<Image src={airag} alt="Airag served in skin" />
+<Image src={airag} alt="Traditional Mongolian airag (fermented horse milk) served in leather skin" />
 
 Famous for horse races, the Saturday of Naadam is when the action happens. To my surprise, the jockeys were young children. In the race we watched, they couldn't have been older than 10 years old, riding the Mongolian horses without saddles like it was the only natural thing to do.
 
 Being from Germany, I never thought twice about the weather when seeing temperatures below 30 degree Celcius. Big mistake. To watch the races, we stood right up against the fences to get a clear view of the finish line. To our demise, the tiny fence did not provide any cover from the glaring Mongolian sun. I learned that day that the sun hits quite a bit differently here than in Germany - a lesson I would, unfortunately, have to learn again later to drive it home. Our wide smiles showed our elation when we spotted a water-spraying truck coming our way. Clearly, the organizers were deeply aware that the viewers required some refreshment. The few seconds it lasted were pure bliss. So here's the recommendation: if you ever find yourself here during Naadam, take a big and stable umbrella with you. Your skin will be eternally grateful.
 
-<Image src={race} alt="Waiting for the horses to come by" />
+<Image src={race} alt="Waiting for horse race to finish at Naadam Festival Mongolia" />
 
 By the time the truck went by, noticably more people had gathered. A good sign that the show was about to start. Multiple rows of people inched closer towards the fence, with another two rows of horses and their riders on top standing right behind.
 
@@ -70,4 +91,4 @@ We made the same trip back, passing by our furry friends on the way. Yes, they w
 
 I realize that some of this might read like a negative recollection of things going down. But I assure you that is far from what this is. I loved every moment of this. Mongolia is such a beautiful and incredible country with absolutely stunning nature, mouth-watering dishes, and incredibly kind people. I'll make sure to highlight more of this part of the country in future posts. This was a trip I'll never forget and I'm grateful for every second. I can highly recommend seeing all of this for yourself. It will be an astonishing experience like nothing you've experienced before.
 
-Next up: the story of how I got the worst sunburn of my life in Kharkhorin.
+Next up: [running through Ulaanbaatar to catch a bus](/articles/mongolia-2025-part-2).

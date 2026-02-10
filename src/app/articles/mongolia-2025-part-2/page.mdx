@@ -1,4 +1,5 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
+import { SITE_URL } from '@/lib/constants'
 import bus from "./bus.jpg"
 import kharkhorin from "./kharkhorin-arrival.jpg"
 import restSite from "./rest-site.jpeg"
@@ -9,13 +10,33 @@ export const article = {
   author: 'Marvin van Stegen',
   date: '2026-02-08',
   title: 'Goats, Ger, and Sunburn - Part 2',
-  description: '',
+  description: "Racing 2km through Ulaanbaatar to catch the wrong bus. Journey from chaos to calm on a 5-hour ride to Kharkhorin, Mongolia's ancient capital. A travel story about missed buses, Korean buses in Mongolia, and the road to adventure through the Mongolian steppe.",
   tags: ['travel', 'mongolia'],
+  keywords: ['Kharkhorin Mongolia', 'Karakorum ancient capital', 'Ulaanbaatar bus terminal', 'Dragon Bus Terminal', 'Elsen Tasarkhai', 'Mongolia bus travel', 'Mongolian steppe', 'Mongolia travel guide'],
 }
 
 export const metadata = {
   title: article.title,
   description: article.description,
+  authors: [{ name: article.author }],
+  keywords: article.keywords,
+  openGraph: {
+    title: article.title,
+    description: article.description,
+    type: 'article',
+    publishedTime: article.date,
+    authors: [article.author],
+    url: `${SITE_URL}/articles/mongolia-2025-part-2`,
+  },
+  twitter: {
+    card: 'summary',
+    creator: '@vinmarcodes',
+    title: article.title,
+    description: article.description,
+  },
+  alternates: {
+    canonical: `${SITE_URL}/articles/mongolia-2025-part-2`,
+  },
 }
 
 export default (props) => <ArticleLayout article={article} {...props} />
@@ -38,7 +59,7 @@ The wet wipes were crucial and coulnd't be missed. The 5-hour bus ride might not
 
 Everything went according to plan. Yes, the bus taking me to the terminal came significantly later than Google predicted, but I'd accounted for that. I arrived at the terminal craving Khuushuur, and was delighted there was actually a place selling them! Expensive and oily? Absolutely. Did I care? Yes I did! But not nearly enough not to devour them. I just love these things.
 
-<Image src={khuushuur} alt="Khuushuur at Dragon Bus Terminal" />
+<Image src={khuushuur} alt="Khuushuur (Mongolian fried pastry) at Dragon Bus Terminal" />
 
 With 45 minutes left on the clock and a full stomach, E-Mart called out to me for those wet wipes. Preparation completed. I had everything ready and strode towards the buses. I looked around. I looked again. Not a single glance of a bus to Kharkhorin.
 
@@ -60,7 +81,7 @@ I strapped my 8kg backpack tighter, grabbed my shopping back with camera gear an
 
 Google estimated 30 minutes for this route by foot. I couldn't have that. I'd have to be faster and pray for a slight delay from the bus driver.
 
-<Image src={busTerminal} alt="Google Maps view of the route to the other bus terminal" />
+<Image src={busTerminal} alt="Google Maps showing route from New Dragon Terminal to Old Dragon Terminal in Ulaanbaatar" />
 
 
 My girlfriend wasn't with me on this trip. She wanted to stay behind and spend more time with her family. I had one job...
@@ -95,7 +116,7 @@ With dried mango and some sweets in hand, I planted myself in my bus seat. Well,
 
 My eyes scanned the symbols in bus and they looked awfully familiar and definitely nothing like the cyrillic I had studied before coming here. Korean! I was sitting in an old Korean bus! Japanese cars and Korean buses. This country surely is unusual and surprising in the most unexpected ways.
 
-<Image src={bus} alt="Korean bus in Mongolia" />
+<Image src={bus} alt="Korean imported bus interior on Mongolia intercity route" />
 
 ## Bladder, Please Hold
 
@@ -115,7 +136,7 @@ Luckily, not everything should be going badly today. The bus driver slowed down 
 
 People flooded into the lonely restaurant. Bustling with groups of heads filling all the available space. I studied the menu and made a safe choice. My experience with rest stop restaurants in Germany taught me to be better safe than sorry. But this was good! Mongolian meat simply never disappoints.
 
-<Image src={restSite} alt="Dinner at the rest site" />
+<Image src={restSite} alt="Dinner at rest stop on Ulaanbaatar to Kharkhorin bus route" />
 
 I had no idea how long we'd be stopping for and trying to find familiar faces from my bus proved to be a futile exercise. I gobbled down my food and hurried back to the bus. No intention of getting stranded in the middle of nowhere. From the comfort of my seat, I could hear the bus driver screaming louder and louder at the crowd. Apparently not everyone was as concerned about the time as I was.
 
@@ -123,8 +144,10 @@ I had no idea how long we'd be stopping for and trying to find familiar faces fr
 
 The last hour passed in a blur watching the grassland and mountain ranges run by as they were kissed by the golden sunset. An announcement mentioned Kharkhorin as we pulled up at a small grocery store. No bus stop sign, nothing indicating that this was actually our destination. I grabbed my bags and hurried my way out of the bus. I was exhausted. And there was still a 15 minute walk to my guesthouse waiting for me, assuming I could find it. Time to find that ger and tick off the next item on my checklist: exploring Kharkhorin.
 
-<Image src={kharkhorin} alt="The view arriving at Kharkhorin" />
+<Image src={kharkhorin} alt="Scenic view arriving at Kharkhorin with mountain ranges" />
 
 On to the next adventure!
 
 Next up: Kharkhorin and a sunburn leaving me in pain with every step I took
+
+**Read the series:** [Part 1: Goats, Ger, and Sunburn - Naadam Festival](/articles/mongolia-2025-part-1)
