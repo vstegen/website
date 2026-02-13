@@ -1,0 +1,89 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import { SITE_URL } from '@/lib/constants'
+import jar from "./jar.png"
+import note from "./note.png"
+
+export const article = {
+  author: 'Marvin van Stegen',
+  date: '2026-02-14',
+  title: 'Keepsakebox: Digital Memories For You And Your Partner',
+  description: "The digital space that makes long-distance couples feel closer. The distance and not being able to hold the person you love can be absolutely excruciating. I know because I've experienced it as well. Keepsakebox tries to bridge the gap a bit with a space full of memories and small notes for couples.",
+  tags: ['projects', 'relationship', 'ldr'],
+  keywords: ['long-distance relationship', 'LDR', 'SaaS', 'Indiehacker', 'Digital Keepsake', 'Digital Space', 'Love', 'Gift', "Valentine's Day", 'Valentines Day', 'Girlfriend', 'Boyfriend'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+  authors: [{ name: article.author }],
+  keywords: article.keywords,
+  openGraph: {
+    title: article.title,
+    description: article.description,
+    type: 'article',
+    publishedTime: article.date,
+    authors: [article.author],
+    url: `${SITE_URL}/articles/keepsakebox-digital-memories`,
+  },
+  twitter: {
+    card: 'summary',
+    creator: '@vinmarcodes',
+    title: article.title,
+    description: article.description,
+  },
+  alternates: {
+    canonical: `${SITE_URL}/articles/keepsakebox-digital-memories`,
+  },
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+The digital space that makes long-distance couples feel closer.
+
+The distance and not being able to hold the person you love can be absolutely excruciating. I know because I've
+experienced it as well. Keepsakebox tries to bridge the gap a bit with a space full of memories and small notes for couples.
+
+<Image src={jar} alt="Reason I Love You Jar" />
+
+## What is Keepsakebox
+
+[Keepsakebox](https://www.keepsakebox.app) is a private digital space where you can create, share, and grow your most meaningful memories with someone you care about.
+
+Think of it as a keepsake box you can open from anywhere in the world, except instead of faded polaroids and folded notes, everything lives beautifully in one place and nothing gets lost.
+
+At least, that is the vision.
+
+Right now, [Keepsakebox](https://www.keepsakebox.app) supports what I call a "Reasons I Love You" jar. A collections of small notes for your partner to discover. But I don't want to stop here.
+
+Next up, I want to extend Kepesakebox with love letters, "Open when..." notes, a relationship timeline, and a photo gallery.
+
+You can write love letters that feel timeless, the kind you'd want to read again years from now. You can create "open when" notes for specific moments in your partner's life: open when you're homesick, open on your birthday, open when you need a reminder that someone across the world is thinking about you right now. There's a shared timeline where you chronicle everything from your first date to the little Tuesday evening that somehow became one of your favorite memories. And photo memories, because sometimes a photo next to the letter that describes it says more than either one could alone.
+
+<Image src={note} alt="Note of Reason I Love You Jar" />
+
+## How it started
+
+A while back, my girlfriend's birthday was coming up. It also happened to be the anniversary of our first date. I wanted to gift her something special that would be completely unique. As a software engineer, I immediately thought about building something.
+
+It ended up being a very ugly small website with a letter and a handful of some digital cards of things I love about her and what makes her special.
+
+This project ended up being the starting point for [Keepsakebox](https://www.keepsakebox.app).
+
+## Private by design
+
+I want to be clear about one thing from the start: privacy isn't an afterthought here. Your keepsake is yours. It's password-protected, and access is controlled entirely by you. No one sees what's inside unless you want them to. The idea of someone else reading your love letters is enough to make me want to close my laptop, so I'm building it with that same protectiveness in mind.
+
+## What's next
+
+[Keepsakebox](https://www.keepsakebox.app) is still in development. I'm building it piece by piece, and there's a lot I'm excited to create. As I've shared earlier in this post I plan on adding the following features:
+
+- **Love Letters**
+
+- **"Open When..." Notes:** Create sealed notes for specific moments. Open when you're sad. Open on your birthday. Open when you miss me. Your partner picks one when the moment feels right.
+
+- **Shared Timeline:** A visual history of your relationship. First date, first trip, that random Tuesday you both remember for no reason.
+
+- **Photo Memories:** Gather your favorite photos alongside the letters and notes, and not scattered in your camera roll.
+
+Stay tuned. There's more to share soon.
+
