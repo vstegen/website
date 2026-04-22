@@ -60,7 +60,7 @@ const experience: ExperienceItem[] = [
     achievements: [
       'Built an AI-powered automation agent using Midscene that enables developers to implement user management across third-party services while reducing development time to integrate by 2 days per service',
       'Optimized customer request processing by implementing request prioritization based on request types, significantly improving user management processing latency across high-traffic workloads',
-      'Solved OAuth re-integration issues by developing a GitHub app for organization-wide user management, removing related integration failures',
+      'Expanded platform integration coverage for user management by \textbf{25+} SaaS solutions by building API and puppeteer scraping clients, including a custom GitHub app as well integrating with Microsoft Entra ID',
     ],
   },
   {
@@ -96,6 +96,7 @@ const experience: ExperienceItem[] = [
       'Achieved zero-downtime launch of Amazon CodeCatalyst Dev Environments by designing and executing comprehensive load testing identifying and resolving multiple service bottlenecks with DDB, SFN, and Lambda',
       'Designed and led implementation of scalable event-driven architecture using AWS EventBridge for customizable resource lifecycle events, serving 2000+ internal and external users while reducing API load',
       "Achieved 0 unplanned microservice restarts by utilizing Go's pprof to identify and resolve memory leaks, achieving over 90% memory usage reduction",
+      'Strengthened security infrastructure by authoring threat model for EC2 fleet and ECS task management, discovering critical permission handling vulnerabilities in the ECS agent architecture',
       'Eliminated validation errors by developing a custom Go-based generic request validator that reduced HTTP request validation issues by over 99%, delivering more precise error messages than standard AWS API Gateway integration',
       'Prevented user data loss by developing a fallback mechanism that restores access to MDE Dev Environments when storage limits were exceeded',
       'Exercised service reliability by building a CI/CD pipeline for continuous execution of E2E and integration tests and canaries, simulating customer behavior',
