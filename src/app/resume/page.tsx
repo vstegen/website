@@ -20,22 +20,35 @@ interface EducationItem {
 }
 
 const technologies = {
-  languages: ['Go', 'TypeScript', 'JavaScript', 'Python', 'HTML & CSS', 'SQL'],
-  technologies: [
-    'AWS',
-    'Docker',
-    'ElasticSearch',
-    'MySQL',
-    'Terraform',
+  programming: [
+    'Go',
+    'TypeScript',
+    'JavaScript',
+    'Python',
+    'Rust',
+    'Elixir',
+    'HTML & CSS',
+    'SQL',
+  ],
+  devops: ['AWS', 'CDK', 'Docker', 'Terraform', 'Git', 'Datadog'],
+  databases: ['DynamoDB', 'PostgreSQL', 'MySQL', 'Redis', 'ElasticSearch'],
+  frameworks: [
     'Node.js',
-    'Git',
-    'Datadog',
+    'React.js',
+    'Angular',
+    'Phoenix LiveView',
+    'Puppeteer',
+    'Midscene.js',
+    'Ginkgo',
+    'FastAPI',
+    'TailwindCSS',
   ],
   other: [
     'Distributed Systems',
-    'Event-driven Design',
-    'Serverless Architecture',
+    'Event-driven Architecture',
+    'Serverless',
     'Microservices',
+    'REST API',
     'API Design',
     'CI/CD',
     'Testing',
@@ -44,7 +57,7 @@ const technologies = {
 
 const experience: ExperienceItem[] = [
   {
-    company: 'MoneyForward, Inc',
+    company: 'Money Forward, Inc',
     position: 'Software Engineer',
     location: 'Tokyo, Japan',
     period: 'May 2025 – Present',
@@ -54,13 +67,17 @@ const experience: ExperienceItem[] = [
       'AWS',
       'MySQL',
       'Redis',
+      'ElasticSearch',
       'Terraform',
       'Datadog',
     ],
     achievements: [
-      'Built an AI-powered automation agent using Midscene that enables developers to implement user management across third-party services while reducing development time to integrate by 2 days per service',
-      'Optimized customer request processing by implementing request prioritization based on request types, significantly improving user management processing latency across high-traffic workloads',
-      'Expanded platform integration coverage for user management by \textbf{25+} SaaS solutions by building API and puppeteer scraping clients, including a custom GitHub app as well integrating with Microsoft Entra ID',
+      'Reduced SaaS integration implementation time from 1-2 days to ~30 minutes by building an agentic browser automation system with an OpenAI-powered planner and Midscene.js across 10+ integrations',
+      'Improved worst-case user provisioning latency from 1-2 hours to ~5 minutes by introducing a priority queue to isolate critical operations from nightly batch jobs across thousands of workspaces',
+      'Unblocked a major enterprise customer by designing a tenant-aware OAuth callback proxy on AWS Lambda using state-suffix encoding, avoiding weeks of work re-registering 80+ third-party OAuth apps',
+      'Built 30+ SaaS user management integrations via REST APIs, Puppeteer scrapers, and a custom GitHub App',
+      'Unlocked user management for any customer-managed SaaS application by integrating Microsoft Entra ID as an IdP, eliminating per-app integration work',
+      'Eliminated customer-reported disruption from environments stuck in maintenance mode by implementing an automated retry command on a CloudWatch schedule',
     ],
   },
   {
@@ -93,14 +110,19 @@ const experience: ExperienceItem[] = [
       'StepFunctions',
     ],
     achievements: [
-      'Achieved zero-downtime launch of Amazon CodeCatalyst Dev Environments by designing and executing comprehensive load testing identifying and resolving multiple service bottlenecks with DDB, SFN, and Lambda',
-      'Designed and led implementation of scalable event-driven architecture using AWS EventBridge for customizable resource lifecycle events, serving 2000+ internal and external users while reducing API load',
-      "Achieved 0 unplanned microservice restarts by utilizing Go's pprof to identify and resolve memory leaks, achieving over 90% memory usage reduction",
-      'Strengthened security infrastructure by authoring threat model for EC2 fleet and ECS task management, discovering critical permission handling vulnerabilities in the ECS agent architecture',
-      'Eliminated validation errors by developing a custom Go-based generic request validator that reduced HTTP request validation issues by over 99%, delivering more precise error messages than standard AWS API Gateway integration',
-      'Prevented user data loss by developing a fallback mechanism that restores access to MDE Dev Environments when storage limits were exceeded',
-      'Exercised service reliability by building a CI/CD pipeline for continuous execution of E2E and integration tests and canaries, simulating customer behavior',
-      'Achieved operational readiness (ORR) approval for service launch by implementing region-specific deployment safety protocols and creating operational tooling, dashboards, and over 200 additional alarms',
+      'Enabled zero-downtime launch of Amazon CodeCatalyst Dev Environments by leading large-scale load testing and resolving critical bottlenecks across DynamoDB, Step Functions, and Lambda prior to release',
+      'Designed and led implementation of an event-driven resource lifecycle system via AWS EventBridge, eliminating GetMetadata API polling and delivering automated status events to 2000+ users',
+      'Identified a critical cross-host container-isolation vulnerability through threat modeling, where randomized container IDs served as the only security boundary between hosts, enabling potential container compromise on unrelated hosts',
+      "Eliminated recurring microservice crashes (previously every 2-3 days) by using Go's pprof to identify and resolve memory leaks, reducing memory usage by over 90%",
+      'Prevented recurring weekly customer data loss scenarios by implementing a fallback recovery boot path for storage-exhausted MDE Dev Environments, allowing users to retrieve their data',
+      'Reduced HTTP request validation errors by 99% by developing a custom Go-based generic request validator, delivering more precise error messages than standard AWS API Gateway integration',
+      'Accelerated test infrastructure iteration by decoupling E2E tests and customer-behavior-simulating canaries from microservice rollout via a dedicated TypeScript-based CI/CD pipeline',
+      'Led ORR approval for production deployment across 40+ AWS regions by implementing safety protocols, 200+ alarms and dashboards, operational tooling, and documenting 300+ dependency API limits',
+      'Reduced operational response time by building a self-updating multi-region operations dashboard with instant CloudWatch access for any combination of microservice, region, and deployment stage',
+      'Expanded image source flexibility for enterprise customers with internal registries by building a Go-based Docker credentials helper for private AWS ECR images',
+      'Enabled customer Dev Environments to launch with startup scripts requiring API keys and secrets by integrating AWS Secrets Manager to inject them as environment variables at boot time',
+      'Implemented enterprise security and compliance requirements including IAM tag-based access control and full AWS CloudTrail audit log integration for customer resources',
+      'Mentored 2 engineers in load testing methodology, both of whom subsequently designed and executed load tests independently for new service features',
     ],
   },
   {
@@ -108,21 +130,13 @@ const experience: ExperienceItem[] = [
     position: 'Consultant',
     location: 'Berlin, Germany',
     period: 'Sep 2019 – Apr 2021',
-    technologies: [
-      'Python',
-      'TypeScript',
-      'Angular',
-      'Scala',
-      'Spark',
-      'S3',
-      'Google Maps API',
-      'MLflow',
-    ],
+    technologies: ['Python', 'TypeScript', 'Angular', 'S3', 'Google Maps API'],
     achievements: [
-      'Reduced development time by 40 hours per deployed web study by designing and developing a modern Angular-based web study service with streamlined study configuration',
-      'Developed a Python-based web study service backend, handling user authentication and study result persistence in AWS S3-compatible storage',
-      'Optimized data analysis performance by introducing caching of previously generated results and improving algorithmic complexity, achieving 90% runtime reduction and saving 2 hours per week',
-      'Developed a statistical model identifying vehicle waiting segments near destinations by analyzing over 1 million data samples, leading to continued client engagement',
+      'Reduced development time by ~40 hours per web study by building a full-stack behavioral research platform with an Angular frontend, FastAPI backend, and S3-compatible storage',
+      'Optimized data analysis performance by introducing result caching and improving algorithmic complexity, achieving 90% runtime reduction and saving 2 hours per week',
+      'Secured a follow-on client engagement by analyzing over 1 million ship position samples, building a statistical model to identify waiting segments with Google Maps visualizations',
+      'Enabled more accurate marketing targeting by segmenting 5000+ study participants into 6 behavioral groups via statistical analysis of subconscious preferences using various statistical methods in Python',
+      'Led the requirements definition for a verification tool and monitoring dashboard for deep learning image labeling models, securing a new client engagement',
     ],
   },
   {
@@ -190,18 +204,34 @@ function TechnologiesSection() {
       <div className="space-y-2 text-sm">
         <div>
           <span className="font-medium text-zinc-800 dark:text-zinc-100">
-            Languages:{' '}
+            Programming:{' '}
           </span>
           <span className="text-zinc-600 dark:text-zinc-400">
-            {technologies.languages.join(', ')}
+            {technologies.programming.join(', ')}
           </span>
         </div>
         <div>
           <span className="font-medium text-zinc-800 dark:text-zinc-100">
-            Technologies:{' '}
+            DevOps:{' '}
           </span>
           <span className="text-zinc-600 dark:text-zinc-400">
-            {technologies.technologies.join(', ')}
+            {technologies.devops.join(', ')}
+          </span>
+        </div>
+        <div>
+          <span className="font-medium text-zinc-800 dark:text-zinc-100">
+            Databases:{' '}
+          </span>
+          <span className="text-zinc-600 dark:text-zinc-400">
+            {technologies.databases.join(', ')}
+          </span>
+        </div>
+        <div>
+          <span className="font-medium text-zinc-800 dark:text-zinc-100">
+            Frameworks:{' '}
+          </span>
+          <span className="text-zinc-600 dark:text-zinc-400">
+            {technologies.frameworks.join(', ')}
           </span>
         </div>
         <div>
